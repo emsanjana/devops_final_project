@@ -1,4 +1,4 @@
-# DevOps Final Project - Flask Application Deployment
+# DevOps Project - Flask Application Deployment
 
 This project demonstrates a complete DevOps workflow starting from source code in GitHub, building CI/CD pipelines using Jenkins and GitHub Actions, containerizing the application using Docker, and deploying it to Kubernetes using Minikube.
 
