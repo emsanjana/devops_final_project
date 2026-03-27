@@ -18,13 +18,21 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r app/requirements.txt'
+                sh '''
+                python3 -m venv venv
+                . venv/bin/activate
+                pip install --upgrade pip
+                pip install -r app/requirements.txt
+                '''
             }
         }
 
         stage('Lint & Validate') {
             steps {
-                sh 'python -m py_compile app/app.py'
+                sh '''
+                . venv/bin/activate
+                python -m py_compile app/app.py
+                '''
             }
         }
 
