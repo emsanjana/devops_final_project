@@ -1,7 +1,9 @@
-pipeline {
+pipeline 
+{
     agent any
 
-    environment {
+    environment 
+    {
         DOCKER_IMAGE = "paisanjana/devops_flask_app:latest"
         DB_HOST = "your_db_host"
         POSTGRES_DB = "your_db_name"
@@ -36,6 +38,15 @@ pipeline {
             }
         }
 
+	stage('Run Tests') {
+            steps {
+                sh '''
+                . venv/bin/activate
+                python -m unittest app/test_app.py
+                '''
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
@@ -53,12 +64,15 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
+    post 
+    {
+        success 
+	{
+            echo 'Pipeline execution completed successfully!'
         }
-        failure {
-            echo 'Pipeline failed'
+        failure 
+	{
+            echo 'Pipeline execution failed'
         }
     }
 }
