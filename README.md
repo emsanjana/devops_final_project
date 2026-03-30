@@ -6,7 +6,8 @@ This project demonstrates a complete DevOps workflow starting from source code i
 
 # Project Structure
 
-devops_final_project/
+devops_final_project/  
+
 │
 
 ├── app/
@@ -123,3 +124,4 @@ kubectl scale deployment flask-app --replicas=3
 - Multiple pods running
 - Database connected
 - Application accessible via browser
+- Testing
