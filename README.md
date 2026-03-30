@@ -8,37 +8,21 @@ This project demonstrates a complete DevOps workflow starting from source code i
 
 devops_final_project/
 │
-
 ├── app/
-
 │ ├── app.py
-
 │ └── requirements.txt
-
 │
-
 ├── k8s/
-
 │ ├── deployment.yaml
-
 │ ├── service.yaml
-
 │ ├── postgres-deployment.yaml
-
 │ └── postgres-service.yaml
-
 │
-
 ├── .github/workflows/
-
 │ └── ci.yml
-
 │
-
 ├── Dockerfile
-
 ├── Jenkinsfile
-
 └── README.md
 
 
