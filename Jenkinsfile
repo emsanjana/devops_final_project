@@ -12,8 +12,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/emsanjana/devops_final_project.git'
-            }
+               checkout scm
+	    }
         }
 
         stage('Install Dependencies') {
