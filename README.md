@@ -123,3 +123,4 @@ kubectl scale deployment flask-app --replicas=3
 - Multiple pods running
 - Database connected
 - Application accessible via browser
+- Testing
